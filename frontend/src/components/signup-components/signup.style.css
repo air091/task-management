@@ -1,0 +1,96 @@
+.signup__container {
+    border: 2px solid red;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.signup__wrapper {
+    /* border: 1px solid var(--violet-300); */
+    background-color: var(--white);
+    width: 100%;
+    max-width: 45.6rem;
+    padding-inline: 2.6rem;
+    padding-block: 5rem;
+    border-radius: 2rem;
+    box-shadow: 0.2rem 0.4rem 1rem hsla(281, 37%, 27%, 0.2);
+}
+
+.signup__form {
+    display: grid;
+    padding-block: 1.4rem;
+    row-gap: 1.4rem;
+}
+
+
+.input__container {
+    display: grid;
+    row-gap: 0.4rem;
+}
+
+.input__wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input__wrapper .user__icon {
+    position: absolute;
+    left: 1rem;
+    fill: hsl(0, 0%, 80%);
+    transition: fill 0.2s ease-in;
+}
+
+.input__wrapper:focus-within .user__icon {
+    fill: var(--violet-200);
+}
+
+.input__wrapper input {
+    width: 100%;
+    display: block;
+    height: 3.8rem;
+    padding-inline: 4rem;
+    border: 2px solid hsl(0, 0%, 85%);
+    outline: none;
+    border-radius: 0.4rem;
+    transition: border 0.2s ease-in;
+}
+
+.input__wrapper input:focus {
+    border: 2px solid var(--violet-200);
+}
+
+.agreement__wrapper p,
+.agreement__wrapper a {
+    font-size: 1.4rem;
+    text-align: start;
+}
+
+.agreement__wrapper p {
+    margin-top: 1.4rem;
+}
+
+.agreement__wrapper a {
+    text-decoration: none;
+    color: hsl(222, 100%, 50%);
+}
+
+.submit__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3.8rem;
+    font-size: 1.6rem;
+    font-weight: 500;
+    border: none;
+    border-radius: 0.4rem;
+    background-color: var(--violet-100);
+    color: var(--white);
+    cursor: pointer;
+    transition: background-color 0.2s ease-in;
+}
+
+.submit__btn:hover {
+    background-color: var(--violet-200);
+}

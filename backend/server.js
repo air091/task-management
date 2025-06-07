@@ -1,11 +1,13 @@
 const express = require("express");
 require("dotenv/config");
+const cors = require("cors");
 const databaseConnection = require("./database.js");
 const User = require("./models/user.model.js");
 
 const app = express();
 const port = process.env.PORT;
 
+app.use(cors());
 app.use(express.json());
 
 // sign up

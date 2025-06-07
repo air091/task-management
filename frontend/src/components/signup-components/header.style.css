@@ -1,0 +1,22 @@
+.greet {
+    font-size: 2.6rem;
+    font-weight: 500;
+}
+
+.pink {
+    color: var(--violet-200);
+    font-weight: 700;
+    font-size: 3.2rem;
+}
+
+.blue {
+    color: var(--blue-300);
+    font-weight: 700;
+    font-size: 3.2rem;
+}
+
+.from {
+    display: block;
+    font-weight: 500;
+    font-size: 1.4rem;
+}
