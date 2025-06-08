@@ -27,9 +27,13 @@ const Signup = () => {
     const handleSubmit = async (event) => {
         event.preventDefault();
 
+        if (username === "") setIsUsernameRight({ status: false, message: "Username is required" });
+        if (email === "") setIsEmailRight({ status: false, message: "Email is required" });
+        if (password === "") setIsPasswordRight({ status: false, message: "Password is required" });
+
         if (isUsernameRight.status && isEmailRight.status && isPasswordRight.status) {
             try {
-                const response = await axios.post("http://localhost:5500/api/user/signup", {
+                await axios.post("http://localhost:5500/api/user/signup", {
                     username: username,
                     email: email,
                     password: password
@@ -83,7 +87,7 @@ const Signup = () => {
                             <input id="username" type="text" value={username} onChange={handleOnChangeUsername} autoComplete="off" required />
                         </div>
                         {!isUsernameRight.status && (
-                            <div>
+                            <div className="error">
                                 <p>{isUsernameRight.message}</p>
                             </div>
                         )}
@@ -95,7 +99,7 @@ const Signup = () => {
                             <input id="email" type="email" value={email} onChange={handleOnChangeEmail} autoComplete="off" required />
                         </div>
                         {!isEmailRight.status && (
-                            <div>
+                            <div className="error">
                                 <p>{isEmailRight.message}</p>
                             </div>
                         )}
@@ -107,7 +111,7 @@ const Signup = () => {
                             <input id="password" type="password" value={password} onChange={handleOnChangePassword} autoComplete="off" required />
                         </div>
                         {!isPasswordRight.status && (
-                            <div>
+                            <div className="error">
                                 <p>{isPasswordRight.message}</p>
                             </div>
                         )}
@@ -119,6 +123,7 @@ const Signup = () => {
                         </p>
                     </div>
                     <button className="submit__btn" onClick={handleSubmit}>Sign up</button>
+                    <div>Already have an account? <Link to={"/signin"}>Click here</Link></div>
                 </form>
             </div>
         </div>

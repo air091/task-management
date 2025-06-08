@@ -1,12 +1,13 @@
-.signup__container {
-    border: 2px solid red;
+.signup__container,
+.signin__container {
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.signup__wrapper {
+.signup__wrapper,
+.signin__wrapper {
     /* border: 1px solid var(--violet-300); */
     background-color: var(--white);
     width: 100%;
@@ -17,7 +18,8 @@
     box-shadow: 0.2rem 0.4rem 1rem hsla(281, 37%, 27%, 0.2);
 }
 
-.signup__form {
+.signup__form,
+.signin__form {
     display: grid;
     padding-block: 1.4rem;
     row-gap: 1.4rem;
@@ -50,7 +52,8 @@
     width: 100%;
     display: block;
     height: 3.8rem;
-    padding-inline: 4rem;
+    padding-left: 4rem;
+    padding-right: 2rem;
     border: 2px solid hsl(0, 0%, 85%);
     outline: none;
     border-radius: 0.4rem;
@@ -93,4 +96,13 @@
 
 .submit__btn:hover {
     background-color: var(--violet-200);
+}
+
+
+.error {
+    background-color: hsl(0, 100%, 85%);
+    border: 2px solid red;
+    padding-block: 0.6rem;
+    padding-inline: 1rem;
+    border-radius: 0.4rem;
 }
